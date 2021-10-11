@@ -20,9 +20,9 @@ resources:
       runID: 1
 
 pipelines:
-  - name: my_first_pipeline_<script>alert(1)</script>
+  - name: my_first_pipeline
     steps:
-      - name: p1_s1
+      - name: p1_s1;Bash
         type: Bash
         configuration:
           inputResources:
