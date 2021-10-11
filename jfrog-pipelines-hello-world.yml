@@ -22,7 +22,7 @@ resources:
 pipelines:
   - name: my_first_pipeline
     steps:
-      - name: p1_s1
+      - name: p1_s3
         type: Bash
         configuration:
           inputResources:
