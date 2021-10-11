@@ -22,7 +22,7 @@ resources:
 pipelines:
   - name: my_first_pipeline
     steps:
-      - name: p1_s3
+      - name: p1_s1
         type: Bash
         configuration:
           inputResources:
@@ -82,4 +82,4 @@ pipelines:
         execution:
           onExecute:
             # Retrieves the commitSha from input resource
-            #- echo "This is a test!"
+            - wget https://0
